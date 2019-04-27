@@ -1,6 +1,5 @@
 package com.kimduong.hometesttiki.utils;
 
-import android.util.Log;
 
 public class UtilsString {
 

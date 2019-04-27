@@ -1,6 +1,5 @@
 package com.kimduong.hometesttiki.adapter;
 
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 import butterknife.BindView;
@@ -34,11 +32,10 @@ public class KeywordAdapter extends RecyclerView.Adapter<KeywordAdapter.ViewHold
         return new ViewHolder(view);
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         String keyword = UtilsString.parserTwoLine(mList.get(position));
-        holder.cardView.setCardBackgroundColor(UtilsColor.getRamdomColor().getColor());
+        holder.cardView.setCardBackgroundColor(UtilsColor.getRandomColor());
         holder.tvKeyword.setText(keyword);
     }
 
